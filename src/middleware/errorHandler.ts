@@ -8,6 +8,7 @@ class CustomError extends Error {
     }
 }
 
+
 const errorHandlerMiddleware = (err: any, req: Request, res: Response, next: NextFunction) => {
     logger.error(err)
     if (err instanceof CustomError ) {
